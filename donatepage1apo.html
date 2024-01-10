@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMODE</title>
+    <link rel="stylesheet" href="donatepage1.css">
+</head>
+
+<div class="omode-logo">
+<img src="OMODE-logo.png" style=" width: 180px;">
+</div>
+
+<body>
+<!-- Page One -->   
+  
+<section class="main-bit">
+<img style="width: 285px" src="GSSApoLogo.png">
+<h2>DONATE TO GSS APO</h2>
+
+<div class="currency-input">
+<div class="currency-sign">₦</div>
+<input type="text" id="donationAmtForApo"> 
+</div>
+<br><br>
+
+<div class="anonymous">
+<label style="font-family: Arial, Helvetica, sans-serif;" >Donate Anonymously?</label>
+<input type="checkbox" onchange="goToPage4();">
+</div>
+
+<div id="button">
+<button class="next-button" type="button" onclick="goToPage2()">NEXT</button>
+</div>
+</section>
+
+<script>
+    // Wrap in page load handler
+    window.onload = function() {
+        
+    // Feature detection
+    if(typeof(Storage) !== "undefined") {
+        
+    // Get reference to input
+    const donationInput = document.getElementById("donationAmtForApo");
+    console.log("donationAmtForApo", donationInput);
+        
+    // Save on page hide
+    window.addEventListener("pagehide", () => {
+    localStorage.setItem("donationAmtForApo", donationInput.value);
+    });
+        
+    // Retrieve on page show
+    window.addEventListener("pageshow", () => {  
+    donationInput.value = localStorage.getItem("donationAmtForApo");
+    });
+        
+    } else {
+    // Fallback
+    }
+        
+    };
+    
+    function goToPage2(){
+    window.location.href = "donatepage2apo.html" 
+    } 
+                
+    function goToPage4(){
+    window.location.href = "donatepage4apo.html"    
+    }
+
+     // Get input element 
+var donationInput = document.getElementById("donationAmtForApo");
+
+// Add input listener
+donationInput.addEventListener("input", formatAmount);
+
+function formatAmount(e) {
+
+  // Get value
+  var original = e.target.value;  
+
+  // Remove commas 
+  var numbersOnly = original.replace(/,/g,'');
+
+  // Format number value 
+  var formatted = numbersOnly.replace(/\B(?=(\d{3})+(?!\d))/g, ",");   
+
+  // Set formatted value
+  e.target.value = formatted; 
+
+}
+                
+</script>
+    
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+body{
+background-color: rgb(242, 244, 238);
+text-align: center;
+font-weight: 900;
+}
+        
+.next-button{
+display: inline;
+margin-top: 4em;
+background-color: rgb(242, 220, 74);
+border: 1px solid rgb(240, 222, 104);
+color: black;
+letter-spacing: 0.1em;
+/* opacity: 0.7; */
+font-weight: 900;
+padding: 0.5em 0em;
+width: 6rem;
+border-radius: 0.3rem;
+outline: none;
+cursor: pointer;
+}
+
+.next-button:hover{
+background-color: rgb(214, 186, 0);    
+}
+        
+h2{
+text-align: center;
+margin: 0;
+letter-spacing: 0.2em;
+color: black;
+font-weight: 700;
+/* opacity: 0.7; */
+font-size: 1.3em;
+padding-bottom: 0.75em;
+}
+        
+.back-button{
+display: inline;
+margin-top: 4em;
+background-color: rgb(242, 220, 74);
+border: 1px solid rgb(240, 222, 104);
+color: black;
+letter-spacing: 0.1em;
+/* opacity: 0.7; */
+font-weight: 900;
+padding: 0.5em 0em;
+width: 6rem;
+border-radius: 0.3rem;
+outline: none;
+}
+
+.main-bit{
+margin-top: 250px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMODE</title>
+    <link rel="stylesheet" href="donatepage4.css">
+</head>
+
+<div class="omode-logo">
+<img src="OMODE-logo.png" style=" width: 180px;">
+</div>
+
+<body>
+<section class="main-bit">    
+
+<h2>YOUR DONATION</h2>
+<p style="font-size: 35px;">Please confirm your contribution of ₦<span id="myTargetAmountGalad"></span> to GSS Galadimawa</p>  
+<button class="next-button" type="button" onclick="goToPage5()">CONFIRM</button>
+
+</section>
+
+<script>
+
+    var amt = localStorage.getItem("donationAmtForGalad");
+
+    console.log("amt retrieved", amt)
+
+    if (amt !== null) {
+        var targetElement = document.getElementById('myTargetAmountGalad')
+
+        // console.log("this is targetAmount", targetElement);
+
+        // console.log("Hello here");
+        targetElement.innerHTML = amt;
+
+        console.log("inner HTML", targetElement.innerHTML);
+    }
+
+
+
+    // document.getElementById("donationAmt").innerText = amt;
+
+    // let span = document.getElementById("donationAmtForGalad");
+
+    // document.getElementById("donationAmt").innerText = localStorage.getItem("donationAmt");
+
+    console.log("this is the amount", localStorage.getItem("donationAmtForGalad"));
+        
+    function goToPage5(){
+    window.location.href = "donatepage5.html";
+    }
+</script>
+</body>
+
+</html>

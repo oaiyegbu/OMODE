@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMODE</title>
+    <link rel="stylesheet" href="donatepage5.css">
+</head>
+
+<script>
+// After 5 second delay
+setTimeout(() => {
+
+// Hide loader
+document.querySelector('.loading').style.display = 'none';
+
+// Show check and message
+document.body.innerHTML += `
+  <div style="font-size:100px; color: rgb(242, 220, 74)">✓</div>
+  <p>THANK YOU!</p>
+`;
+
+}, 3500);
+</script>
+
+<div class="omode-logo">
+<img src="OMODE-logo.png" style=" width: 180px;">
+</div>
+
+<body>
+<section class="main-bit">
+
+<div class="loading">
+</div> 
+
+</section>
+</body>
+
+</html>

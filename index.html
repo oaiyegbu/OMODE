@@ -1,0 +1,109 @@
+<!-- Page 1 -->
+<html>
+<head>
+<style>
+/* Some basic styles */ 
+body {
+  font-family: Arial;
+}
+
+input[type="text"] {
+  padding: 5px;
+  margin: 5px;
+}
+
+button {
+  padding: 10px 20px; 
+  background: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+</style>  
+</head>
+<body>
+
+<h1>Enter Donation Amount</h1>
+
+<input type="text" id="donationAmount" placeholder="Enter amount">
+
+<button onclick="goToPage2()">Next</button>
+
+<script>
+function goToPage2() {
+  // Save amount and redirect
+  localStorage.setItem("donationAmount", document.getElementById("donationAmount").value);  
+  window.location.href = "page2.html"; 
+}
+</script>
+
+</body>
+</html>
+
+
+<!-- Page 2 -->
+<html>
+<!-- HTML for name, email, address fields -->
+
+<button onclick="goToPage1()">Back</button> 
+<button onclick="goToPage3()">Next</button>
+
+<script>
+function goToPage1() {
+  window.location.href = "page1.html";
+} 
+
+function goToPage3() {
+  // Save entered info  
+  window.location.href = "page3.html";
+}
+</script>
+
+</body>
+</html>
+
+
+<!-- Page 3 -->
+<!-- HTML for card fields -->
+
+<button onclick="goToPage2()">Back</button>
+<button onclick="goToPage4()">Next</button>
+
+<script>
+// Functions to transition  
+
+function goToPage4() {
+  // Save card info
+  window.location.href = "page4.html"; 
+}
+</script>
+
+</body>
+</html>
+
+
+<!-- Page 4 -->
+<p>Please confirm your contribution of $ <span id="donationAmount"></span></p>  
+
+<button onclick="goToPage3()">Back</button>
+<button onclick="goToPage5()">Confirm</button>
+
+<script>
+// Show donation amount
+document.getElementById("donationAmount").innerText = localStorage.getItem("donationAmount");
+
+function goToPage5() {
+  window.location.href = "page5.html";
+}
+</script>
+
+</body>
+</html>
+
+<!-- Page 5 -->
+<!-- Show processing animation --> 
+
+<p>Thank you! Your donation will go towards XYZ.</p>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+body{
+background-color: rgb(242, 244, 238);
+text-align: center;
+font-weight: 900;
+}
+
+h2{
+text-align: center;
+margin: 0;
+letter-spacing: 0.2em;
+color: black;
+font-weight: 700;
+font-family: Arial, Helvetica, sans-serif;
+/* opacity: 0.7; */
+font-size: 1.3em;
+padding-bottom: 0.75em;
+}
+
+input[type="text"]{
+text-align: left;
+background-color: rgba(161, 177, 206, 0.3);
+font-weight: 700;
+border: 0px solid rgba(165, 190, 234, 0.67);
+color: black;
+font-size: 2.0em;
+box-sizing: border-box;
+padding-left: 0.7em; 
+height: 1.9em;
+/* width: 100%; */
+border-radius: 15px;
+outline: none;
+cursor: text;
+}
+
+
+.next-button{
+display: inline;
+margin-top: 4em;
+background-color: rgb(242, 220, 74);
+border: 1px solid rgb(240, 222, 104);
+color: black;
+letter-spacing: 0.1em;
+/* opacity: 0.7; */
+font-weight: 900;
+padding: 0.5em 0em;
+width: 6rem;
+border-radius: 0.3rem;
+outline: none;
+cursor: pointer;
+}
+
+.next-button:hover{
+background-color: rgb(214, 186, 0);    
+}
+
+.main-bit{
+margin-top: 250px;
+}
+
+.currency-sign {
+padding: 10px;
+display: inline;
+font-size: 30px;
+font-weight: 500;
+}
+  
